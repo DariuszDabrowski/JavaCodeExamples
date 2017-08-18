@@ -40,6 +40,4 @@ public class Rectangle {
     public String toString() {
         return "Rectangle[length=" + _length + ",width=" + _width + "]";
     }
-
-
 }
