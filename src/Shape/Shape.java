@@ -24,7 +24,7 @@ public class Shape {
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("A shape with color of ")
+        sb.append("A Shape with color of ")
                 .append(_color).append(" and ");
         if (_filled) {
             sb.append("filled");

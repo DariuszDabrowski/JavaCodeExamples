@@ -21,9 +21,9 @@ public class Circle extends Shape {
     }
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("A circle with radius=")
+        sb.append("A Circle with radius=")
                 .append(_radius)
-                .append(", witch is a subclass of ")
+                .append(", which is a subclass of ")
                 .append(super.toString());
         return sb.toString();
     }
