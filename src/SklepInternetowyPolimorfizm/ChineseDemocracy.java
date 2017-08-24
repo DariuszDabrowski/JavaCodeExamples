@@ -5,4 +5,7 @@ package SklepInternetowyPolimorfizm;
  */
 public class ChineseDemocracy extends MusicCD {
 
+    public ChineseDemocracy() {
+        super(12, "AlbumOne", "ChineseDemocracy", "GunsNRoses");
+    }
 }

@@ -3,8 +3,8 @@ package AbstractShape;
 
 public class Rectangle extends Shape {
 
-    private double _width = 1.0;
-    private double _length = 1.0;
+    protected double _width = 1.0;
+    protected double _length = 1.0;
 
     public Rectangle() {}
     public Rectangle(double with, double length) {
@@ -21,10 +21,11 @@ public class Rectangle extends Shape {
         _width = width;}
     public double getLength() {return _length;}
     public void setLength(double length) {_length = length;}
-
+    @Override
     public double getArea() {
         return _length * _width;
     }
+    @Override
     public double getPerimeter() {return 2 * (_width + _length);}
 
     public String toString() {

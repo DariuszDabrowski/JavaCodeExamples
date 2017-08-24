@@ -7,6 +7,13 @@ public abstract class Book implements Product {
     protected  String _name;
     protected String _title;
     protected String _Author;
+
+    public Book(int price, String name, String title, String author){
+        _price = price;
+        _name = name;
+        _title = title;
+        _Author = author;
+    }
     @Override
     public int getPrice() {
         return _price;

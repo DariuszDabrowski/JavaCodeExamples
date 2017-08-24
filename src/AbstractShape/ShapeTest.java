@@ -1,11 +1,13 @@
 package AbstractShape;
 
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * Created by Darek on 2017-08-23.
  */
+@Ignore
 public class ShapeTest {
 //    @Test
 //    public void shapeDefaultGetColorIsFilledTest(){

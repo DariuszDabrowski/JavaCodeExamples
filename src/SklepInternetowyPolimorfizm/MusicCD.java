@@ -7,7 +7,12 @@ public abstract class MusicCD implements Product{
     protected String _title;
     protected String _performer;
 
-
+    public MusicCD(int price, String name, String title, String performer){
+        _price = price;
+        _name = name;
+        _title = title;
+        _performer = performer;
+    }
     @Override
     public int getPrice() {
         return _price;

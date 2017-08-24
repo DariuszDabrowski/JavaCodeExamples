@@ -2,8 +2,8 @@ package AbstractShape;
 
 
 public abstract class Shape {
-    private String _color = "red";
-    private Boolean _filled = true;
+    protected String _color = "red";
+    protected Boolean _filled = true;
 
     public Shape(){}
 
@@ -22,10 +22,14 @@ public abstract class Shape {
         _filled = filled;
     }
 
+    public abstract double getArea();
+    public abstract double getPerimeter();
+
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("A Shape with color of ")
-                .append(_color).append(" and ");
+                .append(_color)
+                .append(" and ");
         if (_filled) {
             sb.append("filled");
         } else {
