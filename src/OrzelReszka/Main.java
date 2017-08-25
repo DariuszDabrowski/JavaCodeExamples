@@ -43,6 +43,7 @@ public class Main {
                         System.out.println("WYPADLA RESZKA PRZEGRALES");
                         lose++;
                     }
+                    numberOfGames++;
                     break;
                 case "r":
                     if (cpuMove.equals(GameMoves.RESZKA)){
@@ -52,6 +53,7 @@ public class Main {
                         System.out.println("WYPADL ORZEL PRZEGRALES");
                         lose++;
                     }
+                    numberOfGames++;
                     break;
                 case "q":
                     playerMove = GameMoves.Q;
@@ -59,7 +61,6 @@ public class Main {
                     default:
                         continue;
             }
-            numberOfGames++;
         }
         System.out.printf("Zagrales %d razy z czego wygrales %d " +
                 " a przegrales %d ",numberOfGames, wins, lose);

@@ -1,34 +1,27 @@
 package TaliaKart;
 
-
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
+import static TaliaKart.Karta.*;
 
 public class Talia {
 
-    public enum Figures{
-        DEUCE, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN, JACK, QUEEN, KING, ACE
+    public ArrayList<Karta> prototypeDeck(){
+        List<Karta> list = new ArrayList<Karta>();
+        for (Figures f : Figures.values())
+            for (Colors c : Colors.values())
+                list.add(new Karta(f, c));
+        return new ArrayList<>(list);
     }
 
-    public enum Colors {
-        CLUBS, DIAMONDS, HEARTS, SPADES
+    public ArrayList<Karta> nextTalia(){
+        return new ArrayList<>(prototypeDeck());
     }
 
-    Karta figura;
-    Karta color;
-
-//    public void createDeck() {
-//        List<Talia> talia = new ArrayList<Talia>();
-//        for (Talia c: Colors.values())
-//            for (Talia f: Figures.values())
-//                talia.add(new Talia(c, f));
-//    }
-
-
-
-
-
-    public static void main(String[] args) {
-
+    public ArrayList<Karta> tasuj(ArrayList<Karta> talia){
+        Collections.shuffle(talia);
+        return talia;
     }
 }
