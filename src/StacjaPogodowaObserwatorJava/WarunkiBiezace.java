@@ -1,16 +1,19 @@
 package StacjaPogodowaObserwatorJava;
 
 
-public class WarunkiBiezace implements IWyswietl, IObserwator {
+import java.util.Observable;
+import java.util.Observer;
+
+public class WarunkiBiezace implements IWyswietl, Observer {
 
    private float _temperatura;
    private float _cisnienie;
    private float _wilgotnosc;
-    private IPodmiot _danePogodowe;
+    private Observable _danePogodowe;
 
-    public WarunkiBiezace(IPodmiot danePogodowe){
+    public WarunkiBiezace(Observable danePogodowe){
         _danePogodowe = danePogodowe;
-        _danePogodowe.zarejestrujObserwatora(this);
+        danePogodowe.addObserver(this);
     }
 
     @Override
@@ -19,10 +22,12 @@ public class WarunkiBiezace implements IWyswietl, IObserwator {
     }
 
     @Override
-    public void aktualizuj(float temp, float cisnienie, float wilgotnosc) {
-        _temperatura = temp;
-        _cisnienie = cisnienie;
-        _wilgotnosc = wilgotnosc;
-        wyswietl();
+    public void update(Observable o, Object arg) {
+        if (o instanceof DanePogodowe) {
+            _temperatura = ((DanePogodowe) o).getTemperatura();
+            _cisnienie = ((DanePogodowe) o).getCisnienie();
+            _wilgotnosc = ((DanePogodowe) o).getWilgotnosc();
+            wyswietl();
+        }
     }
 }
