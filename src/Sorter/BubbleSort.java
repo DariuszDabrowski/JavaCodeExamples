@@ -16,6 +16,6 @@ public class BubbleSort implements ISort {
 
             }
         }
-        return new int[tab.length];
+        return tab;
     }
 }
