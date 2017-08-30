@@ -1,8 +1,8 @@
 package BohaterRPG;
 
-/**
- * Created by RENT on 2017-08-30.
- */
 public class Bohater {
-    String imie;
+   protected String imie;
+   protected Tarcza tarcza;
+   protected Miecz miecz;
+   protected Plecak plecak;
 }
