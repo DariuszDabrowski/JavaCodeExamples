@@ -9,7 +9,8 @@ public final class Sorter {
         setSortowanie(sortowanie);
     }
 
-    public void setSortowanie(ISort sortowanie){
+    public void setSortowanie(ISort sortowanie)
+    {
         _sortowanie = sortowanie;
     }
 
