@@ -9,6 +9,6 @@ public class ArraySearcher {
             if (element.equals(strArr[i]))
                 return element;
         }
-        throw new ArrayStoreException("Nie znaleziono elementu");
+        throw new ArrayStoreException("Not found");
     }
 }

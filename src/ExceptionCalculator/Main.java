@@ -9,7 +9,7 @@ public class Main {
             try {
                 temp = Integer.parseInt(s);
             } catch (IllegalArgumentException e) {
-                System.out.println("Znaki " + s + " nie są liczbą1");
+                System.out.println("Znak " + s + " nie jest liczbą");
                 temp = 0;
             }
             sum += temp;
